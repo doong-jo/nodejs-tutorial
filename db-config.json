@@ -1,0 +1,6 @@
+{
+    "host": "mongodb://localhost:27017",
+    "dbname": "sdong001_jobinterview",
+    "user": "sdong001_user",
+    "msg": "sdong001_msg"
+}

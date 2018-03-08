@@ -1,0 +1,42 @@
+{
+  "name": "goorm_internship",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bootstrap": "^4.0.0",
+    "compilex": "^0.7.4",
+    "cookie-parser": "^1.4.3",
+    "decompress": "^4.2.0",
+    "dotenv": "^5.0.0",
+    "ejs": "^2.5.7",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "formidable": "^1.1.1",
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.6.2",
+    "method-override": "^2.3.10",
+    "mongodb": "^3.0.3",
+    "mongoose": "^5.0.7",
+    "morgan": "^1.9.0",
+    "popper.js": "^1.12.9",
+    "python-shell": "^0.5.0",
+    "socket.io": "^2.0.4",
+    "static-favicon": "^2.0.0-alpha",
+    "stylus": "^0.54.5",
+    "tooltip.js": "^1.1.7",
+    "when": "^3.7.8",
+    "xterm": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cho",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

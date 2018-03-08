@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ./part/head %>
+        
+        <!--loading-->
+        <link rel="stylesheet" type="text/css" href="stylesheet/loading.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet/loading-btn.css">
+
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        
+        <!--xterm-->
+        <link rel="stylesheet" type="text/css" href="xterm/dist/xterm.css" />
+        <script src="xterm/dist/xterm.js"></script>
+        <script src="xterm/lib/addons/fit/fit.js"></script>
+    </head>
+    <body>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script> -->
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+          var socket = io();
+        </script>
+        
+        <% include ./part/navbar %>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                
+                
+                <div class="col-1">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active" id="v-pills-editor-tab" data-toggle="pill" href="#v-pills-editor" role="tab" aria-controls="v-pills-editor" aria-selected="true">Editor</a>
+                      <a class="nav-link" id="v-pills-chat-tab" data-toggle="pill" href="#v-pills-chat" role="tab" aria-controls="v-pills-chat" aria-selected="false">Chat</a>
+                    </div>
+                </div>
+                
+                
+                <div class="col-10 h-100">
+                    <div class="tab-content h-100" id="v-pills-tabContent">
+                        <div class="tab-pane h-100 fade show active" id="v-pills-editor" role="tabpanel" aria-labelledby="v-pills-editor-tab">
+                            <div class="row h-100">
+                                <div class="col-3">
+                                    <% include ./tabs/file %>
+                                </div>
+                                <div class="col-9" id='editorDiv' data-toggle="tooltip" data-placement="top" title="Files is saved!">
+                                    <% include ./tabs/editor %>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col-9">
+                                    <div id="runCodeBtn" class="btn btn-primary btn-default hovering btn-lg btn-block hovering ld-over">
+                                        RUN CODE
+                                        <div class="ld ld-over-inverse ld-ball ld-bounce"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col-9">
+                                    <div id="terminal-container"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col-9">
+                                    <div id="compileResult" class="alert alert-warning" role="alert">
+                                        <strong>Output</strong><br>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <footer>
+                                        <% include ./part/footer %>
+                                    </footer>
+                                </div> 
+                            </div>
+                            
+                        </div>
+                        <div class="tab-pane h-100 fade" id="v-pills-chat" role="tabpanel" aria-labelledby="v-pills-chat-tab">
+                            <% include ./tabs/chat %>
+                            <div class="row">
+                                <div class="col-12">
+                                    <footer>
+                                        <% include ./part/footer %>
+                                    </footer>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        
+    </body>
+</html>

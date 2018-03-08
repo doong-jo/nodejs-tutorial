@@ -1,0 +1,26 @@
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <% if( !useremail ) { %>
+        <a class="navbar-brand" href="/">
+        <% } %>
+        <% if( useremail ) { %>
+        <a class="navbar-brand" href="#">
+        <% } %>
+            <img class="navbar-brand" src="https://statics.goorm.io/logo/logo_codigm_white.svg">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <% if( useremail ) { %>
+            <a class="ml-auto text-white" href="#">
+                <%= useremail %>
+            </a>
+            <a class="ml-1 nav-link active" href="/api/logout">Logout</a>
+            <% } %>
+            <% if( !useremail ) { %>
+            <a class="ml-auto nav-link active" href="/signup">Sign up</a>
+            <% } %>
+        </div>
+    </nav>
+</header>

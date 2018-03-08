@@ -1,0 +1,223 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    padding-top: 150px;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+    border: 0;
+}
+.navbar-brand {
+    height: 32px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+/*
+ * Footer
+ */
+footer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 190px;
+}
+
+.footerText {
+    text-color : #3d485c;
+}
+
+.footer-codigm-signature {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 117px;
+}
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+    background:#eee;
+}
+
+/*
+ * Custom Codemirror
+ */
+.CodeMirror {
+    font-size: 14px;
+}
+/*
+ * Custom input(file) button
+ */
+.filebox label {
+    cursor: pointer; 
+} 
+
+.filebox input[type="file"] { 
+    /* 파일 필드 숨기기 */ 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip:rect(0,0,0,0); 
+    border: 0; 
+}
+
+/*
+ * Chat Room
+ */
+
+.chatroomlist{
+    border: 2px #d7dade solid;
+    padding: 0px;
+}
+
+.chatroomblock{
+    border-top: 1px solid #dee2e6;
+    padding: 5px;
+}
+
+.chatroomlistBtn{
+    color: #212529;
+    background-color: #fff;
+    border-color: #fff;
+    text-align: left;
+}
+
+.chatroomlistblock{
+    border-top: 1px solid #dee2e6;
+    /* border: 1px solid black; */
+    margin-left: -2px;
+    margin-right: -2px;
+    padding: 5px;
+}
+.entireChatContainer {
+    border: 2px #d7dade solid;
+}
+
+.roomTitle {
+    background-color: white;
+    padding: 10px;
+}
+
+
+.chatroomContainer {
+    padding:  0px;
+    background-color: #c4e1fb;
+}
+
+.chatRoom{
+    width: 100%;
+    /* height:450px; */
+    
+    overflow: auto;
+    position: relative;
+}
+
+.chat-me-username{
+    display:none;
+}
+.chat-other-username{
+    display: block;
+    margin: 10px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.chat-li-me{
+    text-align: right!important;
+    padding: 10px 0px;
+}
+
+.chat-li-other{
+    text-align: left!important;
+    padding: 10px 0px;
+}
+
+.chat-li-notice{
+    text-align: center!important;
+    padding: 10px 0px;
+    font-size: 0.8rem;
+}
+
+.chat-message-me{
+    padding: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color: black!important;
+    background-color: #fff92e!important;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-message-other{
+    padding: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color: black!important;
+    background-color: white!important;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#messages { list-style-type: none; margin: 0; padding: 0; }
+
+/*
+ * xTerm
+ */
+#terminal {
+    overflow: hidden;
+    width: 500px;
+    height: 100px; /* <- fixed height */
+    font-size: 16px;
+    line-height: 17px; /* <- initial line-height */
+}
+
+/*
+ * Keyboard Shortcuts
+ */
+
+kbd {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    background-color: #f7f7f7;
+    
+    color: black;
+    font-family: Raleway;
+    margin: 0rem; 
+    font-size: 1rem; 
+}
+

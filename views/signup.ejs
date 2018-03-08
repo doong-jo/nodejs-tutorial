@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <% include ./part/head %>
+	</head>
+    <body>
+        <% include ./part/navbar %>
+        <div class="container">
+          <form action="/api/register" method="post" class="form-signin">
+            <h2 class="form-signin-heading">Join us! </h2>
+            <label for="inputName" class="sr-only">Email Address</label>
+            <input type="email" name="inputEmail" class="form-control" placeholder="Email Address" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="inputPassword" class="form-control" placeholder="Password" required="">
+            <button id="registerBtn" type="submit" class="btn btn-lg btn-success btn-block" type="submit">Confirm</button>
+            <% if( IsExist == true ) { %>
+              <div class="alert alert-warning" role="alert">
+              <strong>Sorry!</strong> ID already exists!</div> 
+            <% } %>
+          </form>
+        
+        </div> <!-- /container -->
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <footer>
+            <% include ./part/footer %>
+        </footer>
+    </body>
+</html>

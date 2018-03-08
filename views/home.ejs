@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ./part/head %>
+        <script src="/js/home.js"></script>
+    </head>
+    <body>
+        <% include ./part/navbar %>
+        <div class="container">
+            
+            <form action="" method="post" class="form-signin">
+                
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <label for="inputName" class="sr-only">Email Address</label>
+                <input type="email" name="inputEmail" class="form-control" placeholder="Email Address" required="" autofocus="">
+                <label for="inputName" class="sr-only">Email Address</label>
+                <input type="password" name="inputPassword" class="form-control" placeholder="Password" required="">
+            <!-- <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div> -->
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign  in</button>
+                <div id="loginWarning" class="alert alert-danger invisible" role="alert">
+              
+            </form>
+        </div>
+        
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <footer>
+            <% include ./part/footer %>
+        </footer>
+    </body>
+</html>
